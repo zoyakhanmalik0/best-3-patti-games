@@ -37,7 +37,7 @@ const Home = () => {
       category: "Tips & Tricks",
       readTime: "5 min read",
       views: "23.8K",
-      link: "#"
+      link: "wining-trick"
     },
     {
       id: 3,

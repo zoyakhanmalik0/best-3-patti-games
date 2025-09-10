@@ -150,9 +150,8 @@ const Contact = () => {
                   <span>Support Hours</span>
                 </h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM EST</p>
-                  <p>Sunday: Closed</p>
+                  <p>Monday - Friday: 8:00 AM - 8:00 PM PKT</p>
+                  <p>Saturday, Sunday: Closed</p>
                   <p className="text-green-400 font-medium mt-3">
                     Average response time: 2-4 hours
                   </p>
@@ -167,14 +166,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-cyan-400" />
                     <div>
                       <p className="text-white font-medium">Email</p>
-                      <p className="text-gray-400 text-sm">support@gamevault.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-green-400" />
-                    <div>
-                      <p className="text-white font-medium">Phone</p>
-                      <p className="text-gray-400 text-sm">+1 (555) 123-GAME</p>
+                      <p className="text-gray-400 text-sm">best3pattigame@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">

@@ -1,99 +1,109 @@
-import React, { useState } from "react";
-
-const games = [
-  {
-    id: 1,
-    title: "Dragon Tiger Club",
-    description:
-      "Experience thrilling card-based action with strategic gameplay and vibrant visuals.",
-    image:
-      "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
-    rating: 4.7,
-    link: "https://dragontigerclub.net/?from_gameid=5129078&channelCode=5128469",
-  },
-  {
-    id: 2,
-    title: "3 Patti No1",
-    description:
-      "Classic Indian card game with competitive multiplayer and exciting rewards.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
-    rating: 4.8,
-    link: "https://3pattino1.com/?from_gameid=6372811&channelCode=6362528",
-  },
-  {
-    id: 3,
-    title: "Flying Chess",
-    description:
-      "Fun and engaging board game with strategic moves and multiplayer fun.",
-    image:
-      "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
-    rating: 4.5,
-    link: "https://flyingchess.org/?from_gameid=7167825&channelCode=7167783",
-  },
-  // 👉 keep adding the rest of your games here
-];
-
-const generalRules = [
-  "Start the game and join a table or room.",
-  "Each player gets cards, tokens, or dice depending on the game type.",
-  "Follow the turn order to play moves or place bets.",
-  "Use strategies to beat your opponents.",
-  "The winner is decided based on the highest hand, best move, or reaching the target first.",
-];
+import React from "react";
+import { motion } from "framer-motion";
 
 const HowToPlay = () => {
-  const [activeGame, setActiveGame] = useState(games[0]);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-10 px-4">
-      <h1 className="text-4xl font-bold text-center mb-10">🎮 How to Play</h1>
+    <div className="min-h-screen bg-black py-12 px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-pink-400 to-yellow-500 bg-clip-text text-transparent">
+              How to Play
+            </span>
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Whether you are a beginner or an experienced player, follow this
+            simple guide to learn the basics of playing and enjoy the game to
+            the fullest.
+          </p>
+        </div>
 
-      {/* Game Selector */}
-      <div className="flex flex-wrap justify-center gap-3 mb-8">
-        {games.map((game) => (
-          <button
-            key={game.id}
-            onClick={() => setActiveGame(game)}
-            className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${
-              activeGame.id === game.id
-                ? "bg-blue-600 text-white shadow-lg"
-                : "bg-gray-700 hover:bg-gray-600"
-            }`}
-          >
-            {game.title}
-          </button>
-        ))}
-      </div>
-
-      {/* Active Game Display */}
-      <div className="max-w-4xl mx-auto bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
-        <img
-          src={activeGame.image}
-          alt={activeGame.title}
-          className="w-full h-64 object-cover"
-        />
-        <div className="p-6">
-          <h2 className="text-2xl font-bold mb-2">{activeGame.title}</h2>
-          <p className="text-gray-300 mb-4">{activeGame.description}</p>
-
-          <h3 className="text-xl font-semibold mb-2">How to Play:</h3>
-          <ul className="list-disc list-inside space-y-1 text-gray-400">
-            {generalRules.map((rule, index) => (
-              <li key={index}>{rule}</li>
-            ))}
-          </ul>
-
-          <div className="mt-6">
-            <a
-              href={activeGame.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold transition"
+        {/* Playing Steps */}
+        <div className="space-y-10 text-gray-300 leading-relaxed">
+          {[
+            {
+              step: "1. Launch the Game",
+              desc: "Open the installed game by tapping its icon on your device or selecting it from the menu on our website.",
+            },
+            {
+              step: "2. Understand the Objective",
+              desc: "Each game has a specific goal – it could be scoring points, defeating opponents, or completing levels. Read the game’s rules to understand your objective clearly.",
+            },
+            {
+              step: "3. Learn the Controls",
+              desc: "Familiarize yourself with game controls. On mobile, this may include tap, swipe, or tilt. On PC, controls usually involve the keyboard and mouse.",
+            },
+            {
+              step: "4. Start with Beginner Mode",
+              desc: "Many games offer a tutorial or practice mode. Start there to understand the mechanics before playing in competitive or advanced levels.",
+            },
+            {
+              step: "5. Develop a Strategy",
+              desc: "Pay attention to game rules and patterns. Creating a strategy will improve your chances of winning and make gameplay more fun.",
+            },
+            {
+              step: "6. Play Responsibly",
+              desc: "Enjoy the game for entertainment. Take breaks regularly and make sure you play responsibly without overextending your time.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              Play Now
-            </a>
-          </div>
+              <h2 className="text-2xl font-semibold text-white mb-3">
+                {item.step}
+              </h2>
+              <p>{item.desc}</p>
+            </motion.div>
+          ))}
+
+          {/* Extra Tips Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-700"
+          >
+            <h2 className="text-2xl font-semibold text-white mb-3">
+              Pro Tips for Better Gameplay
+            </h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Read the game rules carefully before starting.</li>
+              <li>Practice regularly to improve your skills.</li>
+              <li>Watch tutorials or guides if available.</li>
+              <li>Play with friends for a more enjoyable experience.</li>
+              <li>Stay calm and avoid rushing moves – patience wins games.</li>
+            </ul>
+          </motion.div>
+
+          {/* Contact Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="mt-10 text-center"
+          >
+            <p>
+              Need help with a specific game? Visit the{" "}
+              <a
+                href="/installation-guide"
+                className="text-yellow-400 hover:underline font-medium"
+              >
+                Game Guides
+              </a>{" "}
+              section or contact us through the{" "}
+              <a
+                href="/contact"
+                className="text-pink-400 hover:underline font-medium"
+              >
+                Contact Page
+              </a>
+              .
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

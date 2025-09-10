@@ -27,7 +27,7 @@ const Blog = () => {
       date: "2025-01-12",
       category: "Teen Patti",
       readTime: "6 min read",
-      link: "#",
+      link: "top10teenpatti",
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ const Blog = () => {
       date: "2025-01-15",
       category: "Tips & Tricks",
       readTime: "5 min read",
-      link: "#",
+      link: "wining-trick",
     },
     {
       id: 3,
