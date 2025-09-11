@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Game {
   id: number;
@@ -18,7 +19,7 @@ const games: Game[] = [
     image:
       "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
     rating: 4.7,
-    link: "/Dragon-tiger-club",
+    link: "/Dragon-tiger-club", // internal route
   },
   {
     id: 2,
@@ -28,7 +29,7 @@ const games: Game[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
     rating: 4.8,
-    link: "/3-Patti-No1",
+    link: "/3-Patti-No1", // internal route
   },
   {
     id: 3,
@@ -38,7 +39,7 @@ const games: Game[] = [
     image:
       "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
     rating: 4.5,
-    link: "/Flying-Chess",
+    link: "/Flying-Chess", // internal route
   },
   {
     id: 4,
@@ -149,31 +150,57 @@ const NewGamesPage: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Download Button */}
+                {/* Button (Internal vs External) */}
                 <div className="mt-2 flex justify-end">
-                  <a
-                    href={game.link}
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
-                               rounded-lg text-xs sm:text-sm font-medium
-                               hover:from-cyan-600 hover:to-purple-700 transition-all
-                               flex items-center shadow-lg shadow-cyan-500/30"
-                  >
-                    <svg
-                      className="w-4 h-4 mr-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {game.link.startsWith("/") ? (
+                    <Link
+                      to={game.link}
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
+                                 rounded-lg text-xs sm:text-sm font-medium
+                                 hover:from-cyan-600 hover:to-purple-700 transition-all
+                                 flex items-center shadow-lg shadow-cyan-500/30"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                      ></path>
-                    </svg>
-                    Download
-                  </a>
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        ></path>
+                      </svg>
+                      Download
+                    </Link>
+                  ) : (
+                    <a
+                      href={game.link}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
+                                 rounded-lg text-xs sm:text-sm font-medium
+                                 hover:from-cyan-600 hover:to-purple-700 transition-all
+                                 flex items-center shadow-lg shadow-cyan-500/30"
+                    >
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        ></path>
+                      </svg>
+                      Download
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

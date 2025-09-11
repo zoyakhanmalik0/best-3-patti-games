@@ -33,7 +33,6 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/3pattigold-vs-3pattireal" element={<TeenPattiGoldvs3PattiReal />} />
-            <Route path="/Dragon-tiger-club" element={<DragonTigerClub />} />
             <Route path="/how-to-play" element={<HowToPlay />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/installation-guide" element={<InstallationGuide />} />

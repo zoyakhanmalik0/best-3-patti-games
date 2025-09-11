@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const games = [
   {
@@ -112,66 +113,68 @@ const GamesPage = () => {
 
         {/* Game Cards */}
         <div className="flex flex-col gap-5">
-          {games.map((game) => (
-            <div
-              key={game.id}
-              className="flex flex-row bg-neutral-900 rounded-xl shadow-lg overflow-hidden
-                         hover:scale-[1.02] transition-transform duration-300
-                         border border-neutral-800 hover:border-cyan-500/50"
-            >
-              {/* Left Image */}
-              <div className="w-24 sm:w-40 flex-shrink-0 flex items-center justify-center bg-black">
-                <img
-                  src={game.image}
-                  alt={game.title}
-                  className="w-full h-24 sm:h-40 object-contain"
-                />
-              </div>
-
-              {/* Right Content */}
-              <div className="flex flex-col justify-between p-3 sm:p-5 flex-1">
-                <div>
-                  <h2 className="text-sm sm:text-lg font-semibold mb-1 text-white">
-                    {game.title}
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-400 line-clamp-2 mb-2">
-                    {game.description}
-                  </p>
-                  <span className="text-yellow-400 font-bold text-xs sm:text-sm">
-                    ⭐ {game.rating}
-                  </span>
+          {games.map((game) => {
+            const isExternal = game.link.startsWith("http");
+            return (
+              <div
+                key={game.id}
+                className="flex flex-row bg-neutral-900 rounded-xl shadow-lg overflow-hidden
+                           hover:scale-[1.02] transition-transform duration-300
+                           border border-neutral-800 hover:border-cyan-500/50"
+              >
+                {/* Left Image */}
+                <div className="w-24 sm:w-40 flex-shrink-0 flex items-center justify-center bg-black">
+                  <img
+                    src={game.image}
+                    alt={game.title}
+                    className="w-full h-24 sm:h-40 object-contain"
+                  />
                 </div>
 
-                {/* Download Button */}
-                <div className="mt-2 flex justify-end">
-                  <a
-                    href={game.link}
-                    // target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
-                               rounded-lg text-xs sm:text-sm font-medium
-                               hover:from-cyan-600 hover:to-purple-700 transition-all
-                               flex items-center shadow-lg shadow-cyan-500/30"
-                  >
-                    <svg
-                      className="w-4 h-4 mr-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                      ></path>
-                    </svg>
-                    Download
-                  </a>
+                {/* Right Content */}
+                <div className="flex flex-col justify-between p-3 sm:p-5 flex-1">
+                  <div>
+                    <h2 className="text-sm sm:text-lg font-semibold mb-1 text-white">
+                      {game.title}
+                    </h2>
+                    <p className="text-xs sm:text-sm text-slate-400 line-clamp-2 mb-2">
+                      {game.description}
+                    </p>
+                    <span className="text-yellow-400 font-bold text-xs sm:text-sm">
+                      ⭐ {game.rating}
+                    </span>
+                  </div>
+
+                  {/* Button */}
+                  <div className="mt-2 flex justify-end">
+                    {isExternal ? (
+                      <a
+                        href={game.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
+                                   rounded-lg text-xs sm:text-sm font-medium
+                                   hover:from-cyan-600 hover:to-purple-700 transition-all
+                                   flex items-center shadow-lg shadow-cyan-500/30"
+                      >
+                        Download
+                      </a>
+                    ) : (
+                      <Link
+                        to={game.link}
+                        className="bg-gradient-to-r from-cyan-500 to-purple-600 px-3 py-1.5
+                                   rounded-lg text-xs sm:text-sm font-medium
+                                   hover:from-cyan-600 hover:to-purple-700 transition-all
+                                   flex items-center shadow-lg shadow-cyan-500/30"
+                      >
+                        Download
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
