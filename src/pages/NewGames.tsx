@@ -19,11 +19,7 @@ const games: Game[] = [
     image:
       "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
     rating: 4.7,
-<<<<<<< HEAD
-    link: "/Dragon-tiger-club", // internal route
-=======
     link: "/dragon-tiger-club",
->>>>>>> bee26898dfb5a234190ee1be29cc1952df8e5436
   },
   {
     id: 2,
@@ -33,11 +29,7 @@ const games: Game[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
     rating: 4.8,
-<<<<<<< HEAD
-    link: "/3-Patti-No1", // internal route
-=======
     link: "/3-patti-no1",
->>>>>>> bee26898dfb5a234190ee1be29cc1952df8e5436
   },
   {
     id: 3,
@@ -47,11 +39,7 @@ const games: Game[] = [
     image:
       "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
     rating: 4.5,
-<<<<<<< HEAD
-    link: "/Flying-Chess", // internal route
-=======
     link: "/flying-chess",
->>>>>>> bee26898dfb5a234190ee1be29cc1952df8e5436
   },
   {
     id: 4,
