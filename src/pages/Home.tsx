@@ -29,7 +29,7 @@ const Home = () => {
     },
     {
       id: 2,
-      title: "Best Teen Patti Winning Tricks That Actually Work",
+      title: "Dragon Tiger Club APK Pakistan Free Download for Android",
       excerpt: "Discover proven strategies and tricks to increase your chances of winning in Teen Patti. Perfect for both beginners and pros.",
       image: "https://e1.pxfuel.com/desktop-wallpaper/186/783/desktop-wallpaper-card-%E2%9D%A4-for-ultra-tv-%E2%80%A2-tablet-king-card.jpg",
       author: "Strategy Experts",
@@ -73,7 +73,7 @@ const Home = () => {
       category: "Teen Patti",
       readTime: "6 min read",
       views: "42.1K",
-      link: "#"
+      link: "3pattigold-vs-3pattireal"
     },
     {
       id: 6,

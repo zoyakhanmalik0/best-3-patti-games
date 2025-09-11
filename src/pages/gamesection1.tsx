@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const games = [
   {
@@ -372,18 +373,38 @@ const GamesPage = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Popular Game Collection
-            </span>
-          </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Discover our top-rated games with immersive gameplay and stunning
-            visuals. Download now to start playing!
-          </p>
-        </div>
+  <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+    <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      Popular Game Collection
+    </span>
+  </h2>
+  <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
+    Discover our top-rated games with immersive gameplay and stunning
+    visuals. Download now to start playing!
+  </p>
+
+  <div className="flex justify-center gap-4">
+  <Link
+    to="/top-10-games"
+    className="bg-gradient-to-r from-cyan-500 to-purple-600 
+               px-5 py-2 rounded-lg text-sm sm:text-base 
+               font-medium text-white transition-all shadow-md 
+               hover:from-cyan-600 hover:to-purple-700"
+  >
+    Top 10 Games
+  </Link>
+
+  <Link
+    to="/new-games"
+    className="bg-gradient-to-r from-cyan-500 to-purple-600 px-5 py-2 rounded-lg 
+               text-sm sm:text-base font-medium text-white 
+               hover:from-cyan-600 hover:to-purple-700 transition-all shadow-md"
+  >
+    New Games
+  </Link>
+</div>
+</div>
 
         {/* Game Cards */}
         <div className="flex flex-col gap-5">

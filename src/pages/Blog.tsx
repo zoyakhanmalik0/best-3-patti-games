@@ -27,20 +27,20 @@ const Blog = () => {
       date: "2025-01-12",
       category: "Teen Patti",
       readTime: "6 min read",
-      link: "top10teenpatti",
+      link: "#",
     },
     {
       id: 2,
-      title: "Best Teen Patti Winning Tricks That Actually Work",
+      title: "Dragon Tiger Club APK Pakistan Free Download for Android",
       excerpt:
         "Discover proven strategies and tricks to increase your chances of winning in Teen Patti. Perfect for both beginners and pros.",
       image:
-        "https://e1.pxfuel.com/desktop-wallpaper/186/783/desktop-wallpaper-card-%E2%9D%A4-for-ultra-tv-%E2%80%A2-tablet-king-card.jpg", // Professional poker player
+        "https://www.filmink.com.au/wp-content/uploads/2024/08/dt1.jpg", 
       author: "Strategy Experts",
       date: "2025-01-15",
       category: "Tips & Tricks",
       readTime: "5 min read",
-      link: "wining-trick",
+      link: "/Dragon-tiger-club",
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ const Blog = () => {
       date: "2025-01-22",
       category: "Teen Patti",
       readTime: "6 min read",
-      link: "#",
+      link: "/3pattigold-vs-3pattireal",
     },
     {
       id: 6,
