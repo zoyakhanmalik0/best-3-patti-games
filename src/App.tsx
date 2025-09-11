@@ -41,9 +41,9 @@ function App() {
             <Route path="/terms-of-service" element={<TermsofService/>} />
             <Route path="/top-10-games" element={<Top10Games />} />
             <Route path="/new-games" element={<NewGames />} />
-            <Route path="/Dragon-tiger-club" element={<DragonTigerClub />} />
-            <Route path="/3-Patti-No1" element={<TeenPattiNo1 />} />
-            <Route path="/Flying-Chess" element={<FlyingChess />} />
+            <Route path="/dragon-tiger-club" element={<DragonTigerClub />} />
+            <Route path="/3-patti-no1" element={<TeenPattiNo1 />} />
+            <Route path="/flying-chess" element={<FlyingChess />} />
 
           </Routes>
         </main>
