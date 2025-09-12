@@ -10,7 +10,7 @@ const games = [
     image:
       "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
     rating: 4.7,
-    link: "/Dragon-tiger-club",
+    link: "/dragon-tiger-club", // ✅ matches your App.js
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const games = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
     rating: 4.8,
-    link: "/3-Patti-No1",
+    link: "/3-patti-no1", // ✅ matches your App.js
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const games = [
     image:
       "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
     rating: 4.5,
-    link: "/Flying-Chess",
+    link: "/flying-chess", // ✅ matches your App.js
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const games = [
     image:
       "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=369,fit=crop,trim=0;21.056451612903224;0;18.048387096774192/AVLprkQNPJSyVQvN/screenshot_2024-12-01_-removebg-preview-YZ9VqrLgxqhValWo.png",
     rating: 4.6,
-    link: "https://teenpattigold99.com/?from_gameid=4984716&channelCode=3853633",
+    link: "https://teenpattigold99.com/?from_gameid=4984716&channelCode=3853633", // external ✅
   },
   {
     id: 16,

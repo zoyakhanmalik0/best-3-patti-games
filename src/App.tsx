@@ -44,7 +44,6 @@ function App() {
             <Route path="/dragon-tiger-club" element={<DragonTigerClub />} />
             <Route path="/3-patti-no1" element={<TeenPattiNo1 />} />
             <Route path="/flying-chess" element={<FlyingChess />} />
-
           </Routes>
         </main>
         <Footer />

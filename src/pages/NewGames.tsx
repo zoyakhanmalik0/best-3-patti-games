@@ -103,7 +103,7 @@ const games: Game[] = [
   },
 ];
 
-const NewGamesPage: React.FC = () => {
+const NewGames: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto px-6">
@@ -160,20 +160,7 @@ const NewGamesPage: React.FC = () => {
                                  hover:from-cyan-600 hover:to-purple-700 transition-all
                                  flex items-center shadow-lg shadow-cyan-500/30"
                     >
-                      <svg
-                        className="w-4 h-4 mr-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                        ></path>
-                      </svg>
-                      Download
+                      Explore
                     </Link>
                   ) : (
                     <a
@@ -185,19 +172,6 @@ const NewGamesPage: React.FC = () => {
                                  hover:from-cyan-600 hover:to-purple-700 transition-all
                                  flex items-center shadow-lg shadow-cyan-500/30"
                     >
-                      <svg
-                        className="w-4 h-4 mr-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                        ></path>
-                      </svg>
                       Download
                     </a>
                   )}
@@ -211,4 +185,4 @@ const NewGamesPage: React.FC = () => {
   );
 };
 
-export default NewGamesPage;
+export default NewGames;

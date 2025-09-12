@@ -61,22 +61,30 @@ const FlyingChessPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center md:justify-start">
                 <a
                   href="https://flyingchess.org/?from_gameid=7167825&channelCode=7167783"
-                  target="_blank"
+                  
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-cyan-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-cyan-500 transition"
                   aria-label="Download Flying Chess APK"
                 >
-                  <Download className="h-5 w-5" /> Download APK
+                  <Download className="h-5 w-5" /> Download Flying Chess
                 </a>
                 <a
                   href="https://flyingchess.org/?from_gameid=7167825&channelCode=7167783"
-                  target="_blank"
+                
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-purple-600/80 text-white font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-purple-500 transition"
                   aria-label="Claim welcome bonus"
                 >
                   <Gift className="h-5 w-5" /> Claim Bonus
                 </a>
+                <a
+                                  href="/"
+                                  rel="noopener noreferrer"
+                                  className="px-6 py-3 bg-cyan-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-cyan-500 transition"
+                                  aria-label="Download 3 Patti No 1 APK"
+                                >
+                                  <Download className="h-5 w-5" /> All 3 Patti Games
+                                </a>
               </div>
             </div>
           </div>
