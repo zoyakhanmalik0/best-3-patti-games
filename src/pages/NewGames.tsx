@@ -19,7 +19,7 @@ const games: Game[] = [
     image:
       "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
     rating: 4.7,
-    link: "/dragon-tiger-club",
+    link: "/new-games/dragon-tiger-club",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const games: Game[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
     rating: 4.8,
-    link: "/3-patti-no1",
+    link: "/new-games/3-patti-no1",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const games: Game[] = [
     image:
       "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
     rating: 4.5,
-    link: "/flying-chess",
+    link: "/new-games/flying-chess",
   },
   {
     id: 4,

@@ -8,7 +8,7 @@ const games = [
     description: "Experience thrilling card-based action with strategic gameplay and vibrant visuals",
     image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/mv02znxE9VIjQByW/1000002709-AoPqxJoxNnivbrLo.png",
     rating: 4.7,
-    link: "/dragon-tiger-club", // Internal route
+    link: "/top-10-games/dragon-tiger-club", // Internal route
     isExternal: false
   },
   {
@@ -17,7 +17,7 @@ const games = [
     description: "Classic Indian card game with competitive multiplayer and exciting rewards",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER8EFNBuzPVKI1QWCFPjGZyl4ttYQKCAOzg&s",
     rating: 4.8,
-    link: "/3-patti-no1", // Internal route
+    link: "/top-10-games/3-patti-no1", // Internal route
     isExternal: false
   },
   {
@@ -26,7 +26,7 @@ const games = [
     description: "Fun and engaging board game with strategic moves and multiplayer fun",
     image: "https://flyingchess.com.pk/wp-content/uploads/2025/02/flying-chess-apk.webp",
     rating: 4.5,
-    link: "/flying-chess", // Internal route
+    link: "/top-10-games/flying-chess", // Internal route
     isExternal: false
   },
   {
